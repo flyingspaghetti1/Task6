@@ -1,0 +1,9 @@
+Run time with the mat.in program:
+C:\Users\Alexandra\PycharmProjects\pythonProject\venv\Scripts\python.exe C:\Users\Alexandra\PycharmProjects\pythonProject\mat.py 
+Elapsed time: 25.355334399995627 seconds
+Process finished with exit code 0
+
+Run time with the mat_cache.in program:
+C:\Users\Alexandra\PycharmProjects\pythonProject\venv\Scripts\python.exe C:\Users\Alexandra\PycharmProjects\pythonProject\math_cache.py 
+Elapsed time: 11.3206860999926 seconds
+Process finished with exit code 0
