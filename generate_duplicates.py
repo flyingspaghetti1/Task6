@@ -18,14 +18,12 @@ def write_to_file(filename, matrices):
 
 
 def main():
-    # Specify the number of matrices you want to generate
     num_matrices = 110000
     num_duplicates = 70000
 
     matrices = []
     unique_matrices = set()
 
-    # Generate the required number of unique matrices
     while len(unique_matrices) < (num_matrices - num_duplicates):
         rows = random.randint(5, 10)
         columns = random.randint(5, 10)
@@ -35,18 +33,15 @@ def main():
 
     unique_matrices = list(unique_matrices)
 
-    # Convert the unique matrix strings back to their original form for output
     for rows, columns, matrix_str in unique_matrices:
         matrix = [[int(matrix_str[i * columns + j]) for j in range(columns)] for i in range(rows)]
         matrices.append((rows, columns, matrix))
 
-    # Add duplicates
     for _ in range(num_duplicates):
         rows, columns, matrix_str = random.choice(unique_matrices)
         matrix = [[int(matrix_str[i * columns + j]) for j in range(columns)] for i in range(rows)]
         matrices.append((rows, columns, matrix))
 
-    # Shuffle to mix unique and duplicate matrices
     random.shuffle(matrices)
 
     write_to_file('mat.in', matrices)
